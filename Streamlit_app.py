@@ -35,3 +35,4 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #output 
 streamlit.dataframe(fruityvice_normalized)
 
+import streamlit.connector
