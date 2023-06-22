@@ -47,4 +47,6 @@ add_my_fruit=streamlit.text_input('What fruit would you like to add?','Jackfruit
 streamlit.write('Thanks for adding ', add_my_fruit)
 fruityvice_response = requests.put("https://fruityvice.com/api/fruit/" + add_my_fruit)
 #streamlit.text(fruityvice_response.json())
-
+my_cur.execute("select * from FRUIT_LOAD_LIST")
+my_data_rows = my_cur.fetchall()
+streamlit.dataframe(my_data_rows)
